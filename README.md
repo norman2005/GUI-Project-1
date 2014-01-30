@@ -3,6 +3,4 @@ GUI-Project
 
 Project For GUI programming 2
 
-awdawdaaawd
-
-this is a test
+For the current site go (here)[weblab.cs.uml.edu/~jcaravet/project/test.html]
