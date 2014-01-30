@@ -1,8 +1,9 @@
 /*
- * Authors: Joshua Caravetta, Norman Mutunga
- * Created: 1/30/2014
- * 
- * This is the Javascript for the circuit building tool.
+ *  Authors: Joshua Caravetta, Norman Mutunga
+ *  School: Umass Lowell
+ *  Class: 91.61 GUI Programming 2
+ *  Date of Creation: 1/23/2014
+ *  This is the Javascript for the circuit building tool.
  */
 
 $(function() {
