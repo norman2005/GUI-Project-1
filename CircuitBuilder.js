@@ -1,16 +1,13 @@
 /*
- *  Authors: Joshua Caravetta, Norman Mutunga
- *  School: Umass Lowell
- *  Class: 91.61 GUI Programming 2
- *  Date of Creation: 1/23/2014
- *  This is the Javascript for the circuit building tool.
+ * Authors: Joshua Caravetta, Norman Mutunga
+ * Created: 1/30/2014
+ * 
+ * This is the Javascript for the circuit building tool.
  */
 
 $(function() {
     var canvasHTML = document.getElementById("myCanvas"); //Holds the canvas.
     var working_canvas = canvasHTML.getContext("2d"); //Holds the context of the canvas.
-    var dx = 1;
-    var dy = 0;
     var objects = []; //Array that holds all the objects that will be put on the screen.
     var saved;
     init();
@@ -29,7 +26,11 @@ $(function() {
      Function will draw all the objects in the object array.
      */
     function draw() {
+
+        //ClearRect will clear the canvas.
         working_canvas.clearRect(0, 0, canvasHTML.width, canvasHTML.height);
+
+        //The for loop will go through all objects in the objects array and draw them.
         for (var i = 0; i < objects.length; i++)
         {
             objects[i].draw();
@@ -88,7 +89,11 @@ $(function() {
      Function used to see if an object is hitting the box by passing the objects x and y in.
      */
     boxData.prototype.hitTest = function(hitX, hitY) {
+
+        //Looks to see if the given x is inside the objects x bounds.
         if (hitX >= this.x && hitX <= (this.x + this.width)) {
+
+            //Looks to see if the given y is inside the objects y bounds.
             if (hitY >= (this.y) && hitY <= (this.y + this.height)) {
                 return true;
             }
@@ -124,6 +129,9 @@ $(function() {
 
     }
 
+    /*
+     * Function draws the wire to the screen with the given information.
+     */
     function drawWire(x, y, length) {
         working_canvas.beginPath();
         working_canvas.moveTo(x, y);
@@ -133,17 +141,24 @@ $(function() {
         working_canvas.stroke();
     }
 
+    /*
+     Function used to see if an object is hitting the wire by passing the objects x and y in.
+     */
     wireData.prototype.hitTest = function(hitX, hitY) {
-        if (this.type === "wire") {
 
-        }
+        //Looks to see if the given x is inside the objects x bounds.
         if (hitX >= this.x && hitX <= (this.x + this.width)) {
+
+            //Looks to see if the given y is inside the objects y bounds.
             if (hitY >= (this.y - this.height) && hitY <= (this.y + this.height)) {
                 return true;
             }
         }
     };
 
+    /*
+     * Function will move the wire to the given x and y location.
+     */
     wireData.prototype.move = function(x, y) {
         this.x = x - 30;
         this.y = y;
@@ -165,7 +180,9 @@ $(function() {
         };
     }
 
-
+    /*
+     * Function will add a resistor at the given x and y loaction.
+     */
     function addResistor(x, y) {
         var resistor = new resistorData;
         resistor.x = x;
@@ -173,14 +190,24 @@ $(function() {
         objects.push(resistor);
     }
 
+    /*
+     Function used to see if an object is hitting the resistor by passing the objects x and y in.
+     */
     resistorData.prototype.hitTest = function(hitX, hitY) {
+
+        //Looks to see if the given x is inside the objects x bounds.
         if (hitX >= this.x && hitX <= (this.x + this.with)) {
+
+            //Looks to see if the given y is inside the objects y bounds.
             if (hitY >= (this.y - this.height) && hitY <= (this.y + this.height)) {
                 return true;
             }
         }
     };
 
+    /*
+     * Function will move the wire to the given x and y location.
+     */
     resistorData.prototype.move = function(x, y) {
         this.x = x - 30;
         this.y = y;
