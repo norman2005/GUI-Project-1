@@ -10,15 +10,16 @@ $(function() {
     var working_canvas = canvasHTML.getContext("2d"); //Holds the context of the canvas.
     var objects = []; //Array that holds all the objects that will be put on the screen.
     var saved;
-    init();
 
+    $("#CircuitToolBar").tabs();
+    init();
 
     /*
      Function will init() the stock objects and call the draw function.
      */
     function init() {
-        addBox(700, 0, 100, 100, "resistor");
-        addBox(700, 100, 100, 100, "wire");
+        //  addBox(700, 0, 100, 100, "resistor");
+        // addBox(700, 100, 100, 100, "wire");
         draw();
     }
 
@@ -37,69 +38,6 @@ $(function() {
         }
     }
 
-    /*
-     Function holds the data for a box
-     */
-    function boxData() {
-        this.x = 0; //Holds the x location of the box.
-        this.y = 0; //Holds the y location of the box.
-        this.width = 0; //Holds the width of the box.
-        this.height = 0; //Holds the height of the box.
-        this.type = "box"; //Holds the type.
-        this.spawner = ""; //Holds what the box will spawn to the screen.
-        this.draw = function() {
-            drawBox(this.x, this.y, this.width, this.height, this.spawner);
-        };
-    }
-
-    /*
-     Function will create a new box with the given infomation. 
-     */
-    function addBox(x, y, width, height, spawner) {
-        var box = new boxData;
-        box.x = x;
-        box.y = y;
-        box.width = width;
-        box.height = height;
-        box.spawner = spawner;
-        objects.push(box);
-    }
-
-    /*
-     Function will draw the box to the screen/
-     */
-    function drawBox(xpos, ypos, Width, Height, spawner) {
-        working_canvas.beginPath();
-        if (spawner === "resistor") {
-            drawResistor(xpos + 20, ypos + 50);
-        }
-        if (spawner === "wire") {
-            drawWire(xpos + 30, ypos + 50, 40);
-        }
-
-        working_canvas.rect(xpos, ypos, Width, Height);
-        working_canvas.fillStyle = '#C0C0C0';
-        working_canvas.fill();
-        working_canvas.linewidth = 7;
-        working_canvas.strokeStyle = 'black';
-        working_canvas.stroke();
-    }
-
-    /*
-     Function used to see if an object is hitting the box by passing the objects x and y in.
-     */
-    boxData.prototype.hitTest = function(hitX, hitY) {
-
-        //Looks to see if the given x is inside the objects x bounds.
-        if (hitX >= this.x && hitX <= (this.x + this.width)) {
-
-            //Looks to see if the given y is inside the objects y bounds.
-            if (hitY >= (this.y) && hitY <= (this.y + this.height)) {
-                return true;
-            }
-        }
-
-    };
 
     /*
      Function will add a wire will the given information.
@@ -184,6 +122,7 @@ $(function() {
      * Function will add a resistor at the given x and y loaction.
      */
     function addResistor(x, y) {
+        console.log("adding");
         var resistor = new resistorData;
         resistor.x = x;
         resistor.y = y;
@@ -213,6 +152,9 @@ $(function() {
         this.y = y;
     };
 
+    /*
+     * Function will draw the resistor a the given x and y.
+     */
     function drawResistor(x_pos, y_pos) {
         working_canvas.beginPath();
         var n;
@@ -247,6 +189,9 @@ $(function() {
         working_canvas.stroke();
     }
 
+    /*
+     * Function gets the mouse location and returns it.
+     */
     function getMousePos(canvas, evt) {
         var rect = canvasHTML.getBoundingClientRect();
         return {
@@ -277,35 +222,52 @@ $(function() {
                         draw();
                     });
                 }
-                if (objects[saved].type === "box") {
-                    if (objects[saved].spawner === "resistor") {
-                        addResistor(mousePos.x, mousePos.y);
-                    }
-                    if (objects[saved].spawner === "wire") {
-                        addWire(mousePos.x, mousePos.y, 40);
-                    }
-
-                }
             }
         }
     });
-    canvasHTML.onmouseup = (function(evt) {
-        var hit = 0;
-        $("#myCanvas").unbind('mousemove');
-        for (var i = 0; i < objects.length; i++) {
-            if (objects[i].hitTest(objects[saved].x + 60, objects[saved].y)) {
-                if (objects[i].type === "box" && objects[saved].type !== "box") {
-                    hit = 1;
 
-                }
+    /*
+     * Function on mouse up it unbinds the canvas to mousemove.
+     */
+    canvasHTML.onmouseup = (function(evt) {
+        $("#myCanvas").unbind('mousemove');
+    });
+
+    /*
+     * Sets the resistor image in the tool bar to be draggable
+     */
+    $('#resistor-img').draggable({
+        helper: 'clone'
+    });
+
+    /*
+     * Sets the wire image in the tool bar to be draggable
+     */
+    $('#wire-img').draggable({
+        helper: 'clone'
+    });
+
+    /*
+     * Function that adds objects to the canvas when images are dropped on it.
+     */
+    $("#myCanvas").droppable({
+        accept: "img",
+        drop: function(event, ui) {
+
+            var mousePos = getMousePos(canvasHTML, event); //Holds the position of the mouse.
+
+            // If statement looks to see if the image that was dropped was the resistor img.
+            if (ui.draggable.attr("id") === "resistor-img") {
+                addResistor(ui.position.left - event.target.offsetLeft, mousePos.y);
             }
-        }
-        if (hit === 1) {
-            objects.splice(saved, 1);
+
+            // If statement loooks to see if the image was dropped was the wire img.
+            if (ui.draggable.attr("id") === "wire-img") {
+                addWire(ui.position.left - event.target.offsetLeft, mousePos.y, 40);
+            }
             draw();
         }
     });
-
 });
 
 
