@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <!--
+              Name: Joshua Caravetta
+              E-mail: joshua_caravetta@student.uml.edu
+              School: Umass Lowell 
+              Class: 91.61 GUI Programming 1
+              Date of Creation: 1/23/2014
+        -->
+
+        <title> Test For Project </title>
+
+        <!-- These are the javascripts needed for this page. -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.15.0/math.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="CircuitBuilder.js"></script>
+
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css">
+        <link rel="stylesheet" href="CircuitBuilder.css">
+    </head>
+
+    <body id="background1">
+        <div id="CircuitBuilder">
+            <div id="CircuitToolBar">
+                <ul>
+                    <li><a href="#power-tab">Power Supplies</a></li>
+                    <li><a href="#resistor-tab">Resistors</a></li>
+                    <li><a href="#wire-tab">Wire</a></li>
+                </ul>
+                <div id="power-tab">
+                    <p> Power here</p>
+                </div>
+                <div id="resistor-tab">
+                    <img id="resistor-img" src="images/resistor.png">
+                </div>
+                <div id="wire-tab">
+                    <img id="wire-img" src="images/wire.png">
+                </div>
+            </div>
+            <canvas id="myCanvas" width="800" height="450"></canvas>
+        </div>
+    </body>
+</html>
