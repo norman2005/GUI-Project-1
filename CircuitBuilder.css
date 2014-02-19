@@ -10,14 +10,19 @@
 }
 
 #resistor-img {
-   
+
+}
+
+#dcpower-img{
+position:relative;
+top: -12px;
 }
 
 #CircuitBuilder{
     position: relative; 
     top: 190px;
-    margin: auto; 
-    left: 330px;
+    margin: auto;
+    width:800px;
 }
 
 #myCanvas {
@@ -34,6 +39,30 @@
     top: -80px;
     width: 791px; 
     height:70px; 
+}
+
+#measurement{
+     position: absolute;
+     top: 18%;
+     left: 55%;
+}
+
+#voltage{
+    position: absolute;
+    width: 20%;
+    left: 33%;
+    top: 18%;
+}
+
+#voltage_label{
+    position: absolute;
+    top:-0.5%;
+}
+
+#save_button{
+    position: absolute;
+    top: 70%;
+    left: 75%;
 }
 
 .ui-tabs .ui-tabs-nav li {

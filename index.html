@@ -6,7 +6,7 @@
               Name: Joshua Caravetta
               E-mail: joshua_caravetta@student.uml.edu
               School: Umass Lowell 
-              Class: 91.61 GUI Programming 1
+              Class: 91.61 GUI Programming 2
               Date of Creation: 1/23/2014
         -->
 
@@ -29,9 +29,10 @@
                     <li><a href="#power-tab">Power Supplies</a></li>
                     <li><a href="#resistor-tab">Resistors</a></li>
                     <li><a href="#wire-tab">Wire</a></li>
+                    <li><a href="#ground-tab">Ground</a></li>
                 </ul>
                 <div id="power-tab">
-                    <p> Power here</p>
+                    <img id="dcpower-img" src="images/dcpower.png">
                 </div>
                 <div id="resistor-tab">
                     <img id="resistor-img" src="images/resistor.png">
@@ -39,8 +40,20 @@
                 <div id="wire-tab">
                     <img id="wire-img" src="images/wire.png">
                 </div>
+                <div id="ground-tab">
+                    <img id="ground-img" src="images/ground.png">
+                </div>
             </div>
-            <canvas id="myCanvas" width="800" height="450"></canvas>
+            <div id="PowerSettingsBox" title="Power Supply Settings">
+                <p id="voltage_label"> Voltage: </p>
+                <input id="voltage" type="text" name="voltage">
+                <select id="measurement">
+                    <option value="V">V</option>
+                    <option value="mV">mV</option>
+                </select>
+                <input id="save_button" type="button" value="Save">
+            </div>
+            <canvas id="myCanvas" width="800"height="450"></canvas>
         </div>
     </body>
 </html>
