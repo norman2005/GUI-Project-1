@@ -38,6 +38,15 @@ body {
     z-index: 5;
 }
 
+#action{
+    top:43%;
+    left:45%;
+    position: absolute;
+    visibility: hidden;
+    width:10%;
+    height:10%;
+}
+
 #holder{
     position:absolute;
     right:0;

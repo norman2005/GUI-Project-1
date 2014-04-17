@@ -12,31 +12,29 @@
 
         <title> Easy Circuit &raquo; Lesson 1 </title>
 
-        <!-- These are the javascripts needed for this page. -->
+        <!-- List of javascripts needed for this page. -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.15.0/math.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
         <script src="js/lib/underscore.js"></script>
         <script src="js/lib/backbone.js"></script>
-        <script data-main="js/main.js" src="js/lib/require.js"></script>
+        <script data-main="js/CircuitBuildingTool/main.js" src="js/lib/require.js"></script>
         <script>
             require.config({
                 urlArgs: "bust=" + (new Date()).getTime()
             });
         </script>
-        <script src="js/Login.js"></script>
-        <script src="js/Logout.js"></script>
-        <script src="js/sessioncheck.js"></script>
-        <script src="jsNav.js"></script>
+        <script src="js/UserAccounts/Login.js"></script>
+        <script src="js/UserAccounts/Logout.js"></script>
+        <script src="js/UserAccounts/sessioncheck.js"></script>
+        <script src="js/Nav.js"></script>
+        <script type="text/javascript" src="js/Lesson/Lesson.js"></script>
 
-        <script type="text/javascript" src="js/Lesson.js"></script>
-
+        <!-- List of css needed for this page. -->
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css">
-        <link rel="stylesheet" href="css/cover.css">
-        <link rel="stylesheet" href="css/CircuitBuilder.css">
-
-
-        <link rel="stylesheet" href="css/Lesson.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/CircuitBuildingTool/CircuitBuilder.css">
+        <link rel="stylesheet" href="css/Lesson/Lesson.css">
     </head>
 
     <body>

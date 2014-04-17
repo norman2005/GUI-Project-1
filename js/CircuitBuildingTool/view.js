@@ -18,7 +18,7 @@ define(['Objects'], function(Objects) {
         if (Object.get('type') === "resistor") {
             renderResistor(Object);
         }
-        if (Object.get('type') === "ground"){
+        if (Object.get('type') === "ground") {
             renderGround(Object);
         }
     }
@@ -105,11 +105,11 @@ define(['Objects'], function(Objects) {
             c.stroke();
         }
     }
-    
-    function renderGround(Ground){
+
+    function renderGround(Ground) {
         var x = Ground.get('x');
         var y = Ground.get('y');
-         c.beginPath();
+        c.beginPath();
         c.moveTo(x, y);
         y = y - 14;
         c.lineTo(x, y);

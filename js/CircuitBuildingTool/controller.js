@@ -5,15 +5,15 @@ define(['Objects', 'Object', 'PowerSupply', 'Wire', 'Ground'],
             var startX;
             var startY;
 
-var canvasHTML = document.getElementById("canvas");
+            var canvasHTML = document.getElementById("canvas");
 
-function getMousePos(canvas, evt) {
-        var rect = canvasHTML.getBoundingClientRect();
-        return {
-            x: evt.clientX - rect.left,
-            y: evt.clientY - rect.top
-        };
-    }
+            function getMousePos(canvas, evt) {
+                var rect = canvasHTML.getBoundingClientRect();
+                return {
+                    x: evt.clientX - rect.left,
+                    y: evt.clientY - rect.top
+                };
+            }
 
 
             function findOBjectUnderMouse(x, y) {
@@ -32,7 +32,7 @@ function getMousePos(canvas, evt) {
             });
 
             canvas.addEventListener('mousemove', function(e) {
-             var mousePos = getMousePos(canvasHTML, e);
+                var mousePos = getMousePos(canvasHTML, e);
                 if (objectBeingMoved) {
                     objectBeingMoved.set({
                         being_moved: true,
@@ -60,7 +60,7 @@ function getMousePos(canvas, evt) {
                 objectBeingModified = findOBjectUnderMouse(e.pageX, e.pageY);
             });
 
- $("#CircuitToolBar").tabs();//Inits the jQuery UI Tabs.
+            $("#CircuitToolBar").tabs();//Inits the jQuery UI Tabs.
 
             $('#ground-img').draggable({cursorAt: {left: 17, top: 15}, helper: 'clone'});
         });

@@ -6,7 +6,7 @@ define(['Object'], function(Object) {
             this.set('type', 'ground');
             this.set('top_snapable', true);
             this.set('top_snap_x', this.get('x'));
-            this.set('top_snap_y', this.get('y')-14);
+            this.set('top_snap_y', this.get('y') - 14);
 
         }
     });

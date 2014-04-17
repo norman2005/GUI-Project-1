@@ -43,12 +43,13 @@ $(document).ready(function() {
     });
 
     $("#Login").click(function() {
-       Login();
+        Login();
     });
-    
-    function Login(){
-         username = $("#user_login").val();
+
+    function Login() {
+        username = $("#user_login").val();
         password = $("#user_password").val();
+        $("#action").css({'visibility': 'visible'});
         $.ajax({
             type: 'post',
             url: '/~jcaravet/NewLayout/Login.php',
@@ -61,6 +62,7 @@ $(document).ready(function() {
             success: function(data) {
                 if (data === "true") {
                     $("#username").html(username);
+                    $("#action").css({'visibility': 'hidden'});
                     $("#username").css({'visibility': 'visible'});
                     $("#logout").css({'visibility': 'visible'});
                     $("#log").css({'visibility': 'hidden'});
