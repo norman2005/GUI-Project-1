@@ -10,28 +10,39 @@
               Date of Creation: 1/23/2014
         -->
 
-        <title> Easy Circuit </title>
+        <title> Easy Circuit &raquo; Lesson 1 </title>
 
         <!-- These are the javascripts needed for this page. -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.15.0/math.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="jCarousel.js"></script>
+<script src="js/lib/underscore.js"></script>
+        <script src="js/lib/backbone.js"></script>
+        <script data-main="js/main.js" src="js/lib/require.js"></script>
+        <script>
+            require.config({
+                urlArgs: "bust=" + (new Date()).getTime()
+            });
+        </script>
         <script src="Login.js"></script>
 <script src="Logout.js"></script>
 <script src="sessioncheck.js"></script>
 <script src="Nav.js"></script>
-        <script src="Carousel.js"></script>
+
+        <script type="text/javascript" src="Lesson.js"></script>
 
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css">
         <link rel="stylesheet" href="cover.css">
-        <link rel="stylesheet" href="carousel.css">
+<link rel="stylesheet" href="CircuitBuilder.css">
+        
+
+        <link rel="stylesheet" href="Lesson.css">
     </head>
 
     <body>
-
-        <div class="site-wrapper">
-
+<div id="tester">
+ <canvas id="canvas" width="650" height="440"></canvas>
+</div>
             <div class="cover-container">
                 <div id="nav-background">
                     <div id="nav-bar">
@@ -50,32 +61,37 @@
                 </div>
             </div>
             <div id="logo"><h1>EASY CIRCUIT</h1></div>
-<p id='welcometext'>The goal is the make circuit learning fun and easy.</p>
-<div id='holder'>
-<p id='info'>Make an account to track your progress or just jump right in to the lessons</p>
-</div>
-	    <img id="image" src="test3.jpg" width="304" height="228">
+<img id="paper" src="paper1.png" width="304" height="228">
+<img id="lesson" src="lesson1.png" width="304" height="228">
+<div id="back"></div>
             <div id="login" title="Login">
-                <input id="user_login" placeholder="Username" type="text" name="user_login">
-                <input id="user_password" placeholder="Password" type="password" name="user_password">
+                <p id="user_name_tag">User Name:</p>
+                <input id="user_login" type="text" name="user_login">
+                <p id="user_password_tag">Password:</p>
+                <input id="user_password" type="password" name="user_password">
                 <input id="Cancel" type="button" value="Cancel">
                 <input id="Login" type="button" value="Login">
             </div>
             <div id="regis" title="Create an Account">
-		<p id="fname">First name:</p>
                 <input id="first_name" type="text" name="first_name">
-		<p id="lname">Last name:</p>
                 <input id="last_name" type="text" name="last_name">
-		<p id="userlogin">Username:</p>
                 <input id="user_name" type="text" name="user_name">
-		<p id="Email">Email:</p>
                 <input id="email" type="text" name="email">
-		<p id="loginpassword">Password:</p>
                 <input id="password" type="text" name="password">
             </div>
-            
+             <div id="lessonbox">
+<div id="placeholder"></div>
+            <div id='wrapper'>
+                <ul id="pagenumber">
+                    <li> 1 </li>
+                    <li> 2 </li>
+                     <li> 3 </li>
+                </ul>
+            </div>
+            <input class="jcarousel-control-prev" type="button" value="&lsaquo; Prev">
+            <input class="jcarousel-control-next" type="button" value="Next &rsaquo;">
+        </div>
             <div id="footer-background">
             </div>
-        </div>
     </body>
 </html>
