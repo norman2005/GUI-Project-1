@@ -17,14 +17,14 @@ a:hover {
 
 html,
 body {
-   
+
     // background-color: #333;
 }
 
 #login-form{
     width: 300px;
     height: 300px;
-    
+
 }
 
 #welcometext{
@@ -32,10 +32,10 @@ body {
     color: white; 
     top: 10%;
     right:0;
-     font-size:50px;
+    font-size:50px;
     font-family:Impact, Charcoal, sans-serif;
     text-shadow: black 0.1em 0.1em 0.2em;
-        z-index: 5;
+    z-index: 5;
 }
 
 #holder{
@@ -50,10 +50,10 @@ body {
     color: white; 
     top: 10%;
     right:0;
-     font-size:40px;
+    font-size:40px;
     font-family:Impact, Charcoal, sans-serif;
     text-shadow: black 0.1em 0.1em 0.2em;
-        z-index: 5;
+    z-index: 5;
 }
 
 
@@ -70,15 +70,15 @@ h1{
 }
 
 #Cancel{
-position: absolute;
-top: 85%;
-right: 2%;
+    position: absolute;
+    top: 85%;
+    right: 2%;
 }
 
 #Login{
-position: absolute;
-top: 85%;
-right: 28%;
+    position: absolute;
+    top: 85%;
+    right: 28%;
 }
 
 #user_name_tag{
@@ -99,21 +99,21 @@ right: 28%;
     height: 15%;
     left: 10%;
     top: 57%;
-border:1px solid;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+    border:1px solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 #user_login{
     position: absolute;
-     width: 80%;
+    width: 80%;
     height: 15%;
     left: 10%;
     top: 22%;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 #message {
@@ -121,11 +121,11 @@ border-radius: 5px;
     right: 4%;
     top: 63%;
     width: 45%;
-     z-index: 5; 
+    z-index: 5; 
 }
 
 h2{
-  
+
     font-size:40px;
     line-height:48px;
     letter-spacing:0px;
@@ -142,7 +142,7 @@ h2{
     background-color: #336699;
     z-index: 5;
     height: 12%;
-   box-shadow: inset 0 0 100px rgba(0,0,0,.3), 0px 6px 15px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.3), 0px 6px 15px rgba(0,0,0,.5);
 }
 
 #nav-bar{
@@ -150,7 +150,7 @@ h2{
     top:1%;
     left: 34%;
     z-index: 3;
-    
+
 }
 
 #nav-background {
@@ -190,83 +190,83 @@ h2{
 }
 
 #paper {
-position: absolute;
-right:0;
+    position: absolute;
+    right:0;
     top: 8%;
     width: 50%;
     height: 92%;
-z-index: 2;
+    z-index: 2;
 }
 
 #paperlesson {
-position: absolute;
-right:25%;
+    position: absolute;
+    right:25%;
     top: 8%;
     width: 50%;
     height: 92%;
-z-index: 2;
+    z-index: 2;
 }
 
 #lesson{
     position: absolute;
-right:15%;
+    right:15%;
     top: 15%;
     width: 20%;
     height: 7%;
-z-index: 2;
+    z-index: 2;
 }
 
 #lessonplan{
     position: absolute;
-right:40%;
+    right:40%;
     top: 15%;
     width: 20%;
     height: 7%;
-z-index: 2;
+    z-index: 2;
 }
 
 #lessonone{
     position: absolute;
-right:58%;
+    right:58%;
     top: 27%;
     width: 7%;
     height: 4%;
-z-index: 2;
- padding:1px;
-border-bottom: 2px solid transparent;
+    z-index: 2;
+    padding:1px;
+    border-bottom: 2px solid transparent;
 }
 
 #lessonone:hover{
     border-bottom-color: black;
-     cursor: pointer;
+    cursor: pointer;
 }
 
 
 #lessononetext{
     position: absolute;
-right:37%;
+    right:37%;
     top: 26%;
     width: 20%;
     height: 6%;
-z-index: 2;
+    z-index: 2;
 }
 
 #lessontwo{
     position: absolute;
-right:58%;
+    right:58%;
     top: 43%;
     width: 7%;
     height: 4%;
-z-index: 2;
+    z-index: 2;
 }
 
 #lessontwotext{
     position: absolute;
-right:45%;
+    right:45%;
     top: 42%;
     width: 12%;
     height: 6%;
-z-index: 2;
+    z-index: 2;
 }
 
 #back{
@@ -276,11 +276,11 @@ z-index: 2;
     width: 100%;
     height: 85%;
     background-color: #D0D0D0;
-    
+
 }
 
 #Tool{
-     position: absolute;
+    position: absolute;
     width:  35%; /*or 70%, or what you want*/
     left:3%;
     top: 58%;
@@ -302,15 +302,15 @@ z-index: 2;
     z-index: 9;
     border-left: 2px solid;
     border-left-color: #404040;
-    
+
 }
 
 #welcome{
-position: absolute;
+    position: absolute;
     left:2%;
     top: -5%;
-width: 100%;
-  padding-right: 0;
+    width: 100%;
+    padding-right: 0;
     padding-left: 0;
     font-size: 14px;
     font-weight: bold;
@@ -328,7 +328,7 @@ width: 100%;
 }
 
 #log{
-      padding-right: 0;
+    padding-right: 0;
     padding-left: 0;
     font-size: 14px;
     font-weight: bold;
@@ -339,7 +339,7 @@ width: 100%;
 }
 #space {
     position: absolute;
-       padding-right: 0;
+    padding-right: 0;
     padding-left: 0;
     top: -5%;
     left: 43%;
@@ -358,7 +358,7 @@ width: 100%;
 }
 
 #reg{
-      padding-right: 0;
+    padding-right: 0;
     padding-left: 0;
     font-size: 14px;
     font-weight: bold;
@@ -371,46 +371,46 @@ width: 100%;
 #reg:hover{
     background-color: transparent;
     border-bottom-color: rgba(255,255,255,.25);
-     cursor: pointer;
+    cursor: pointer;
 }
 
 #log:hover{
-     background-color: transparent;
+    background-color: transparent;
     border-bottom-color: rgba(255,255,255,.25);
-     cursor: pointer;
+    cursor: pointer;
 }
 
 #logout{
-position: absolute;
+    position: absolute;
     right:0;
     top: -5%;
-      font-size: 14px;
+    font-size: 14px;
     font-weight: bold;
     font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
     color: #fff; /* IE8 proofing */
     color: rgba(255,255,255,.75);
-visibility:hidden;
+    visibility:hidden;
 
-border-bottom: 2px solid transparent;
+    border-bottom: 2px solid transparent;
 
 }
 
 #logout:hover{
- background-color: transparent;
+    background-color: transparent;
     border-bottom-color: rgba(255,255,255,.25);
-     cursor: pointer;
+    cursor: pointer;
 }
 
 #username{
-position: absolute;
+    position: absolute;
     left:5%;
     top: -5%;
-      font-size: 14px;
+    font-size: 14px;
     font-weight: bold;
     font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
     color: #fff; /* IE8 proofing */
     color: rgba(255,255,255,.75);
-visibility:hidden;
+    visibility:hidden;
 
 }
 
@@ -428,8 +428,8 @@ visibility:hidden;
     padding-right: 0;
     padding-left: 0;
     font-size: 21px;
-   font-family:Impact, Charcoal, sans-serif;
-   // font-weight: bold;
+    font-family:Impact, Charcoal, sans-serif;
+    // font-weight: bold;
     color: #000; /* IE8 proofing */
     color: rgba(255,255,255,.75);
     border-bottom: 2px solid transparent;

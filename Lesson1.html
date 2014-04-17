@@ -16,7 +16,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.15.0/math.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="js/lib/underscore.js"></script>
+        <script src="js/lib/underscore.js"></script>
         <script src="js/lib/backbone.js"></script>
         <script data-main="js/main.js" src="js/lib/require.js"></script>
         <script>
@@ -24,74 +24,74 @@
                 urlArgs: "bust=" + (new Date()).getTime()
             });
         </script>
-        <script src="Login.js"></script>
-<script src="Logout.js"></script>
-<script src="sessioncheck.js"></script>
-<script src="Nav.js"></script>
+        <script src="js/Login.js"></script>
+        <script src="js/Logout.js"></script>
+        <script src="js/sessioncheck.js"></script>
+        <script src="jsNav.js"></script>
 
-        <script type="text/javascript" src="Lesson.js"></script>
+        <script type="text/javascript" src="js/Lesson.js"></script>
 
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css">
-        <link rel="stylesheet" href="cover.css">
-<link rel="stylesheet" href="CircuitBuilder.css">
-        
+        <link rel="stylesheet" href="css/cover.css">
+        <link rel="stylesheet" href="css/CircuitBuilder.css">
 
-        <link rel="stylesheet" href="Lesson.css">
+
+        <link rel="stylesheet" href="css/Lesson.css">
     </head>
 
     <body>
-<div id="tester">
- <canvas id="canvas" width="650" height="440"></canvas>
-</div>
-            <div class="cover-container">
-                <div id="nav-background">
-                    <div id="nav-bar">
-                        <ul class="nav masthead-nav">
-                            <li><a class='navtext' href="Lessons.html">Lessons</a></li>
-                            <li><a class='navtext' href="#">Circuit Builder</a></li>
-                        </ul>
-                    </div>
-                    <div id="user-acount">
-                        <p id="log">Login</p>
-                        <p id="space">or</p>
-                        <p id="reg">Register</p>
-			<p id="username"></p>
-			<p id='logout'>Logout</p>
-                    </div>
+        <div id="tester">
+            <canvas id="canvas" width="650" height="440"></canvas>
+        </div>
+        <div class="cover-container">
+            <div id="nav-background">
+                <div id="nav-bar">
+                    <ul class="nav masthead-nav">
+                        <li><a class='navtext' href="Lessons.html">Lessons</a></li>
+                        <li><a class='navtext' href="#">Circuit Builder</a></li>
+                    </ul>
+                </div>
+                <div id="user-acount">
+                    <p id="log">Login</p>
+                    <p id="space">or</p>
+                    <p id="reg">Register</p>
+                    <p id="username"></p>
+                    <p id='logout'>Logout</p>
                 </div>
             </div>
-            <div id="logo"><h1>EASY CIRCUIT</h1></div>
-<img id="paper" src="paper1.png" width="304" height="228">
-<img id="lesson" src="lesson1.png" width="304" height="228">
-<div id="back"></div>
-            <div id="login" title="Login">
-                <p id="user_name_tag">User Name:</p>
-                <input id="user_login" type="text" name="user_login">
-                <p id="user_password_tag">Password:</p>
-                <input id="user_password" type="password" name="user_password">
-                <input id="Cancel" type="button" value="Cancel">
-                <input id="Login" type="button" value="Login">
-            </div>
-            <div id="regis" title="Create an Account">
-                <input id="first_name" type="text" name="first_name">
-                <input id="last_name" type="text" name="last_name">
-                <input id="user_name" type="text" name="user_name">
-                <input id="email" type="text" name="email">
-                <input id="password" type="text" name="password">
-            </div>
-             <div id="lessonbox">
-<div id="placeholder"></div>
+        </div>
+        <div id="logo"><h1>EASY CIRCUIT</h1></div>
+        <img id="paper" src="images/paper1.png" width="304" height="228">
+        <img id="lesson" src="images/lesson1.png" width="304" height="228">
+        <div id="back"></div>
+        <div id="login" title="Login">
+            <p id="user_name_tag">User Name:</p>
+            <input id="user_login" type="text" name="user_login">
+            <p id="user_password_tag">Password:</p>
+            <input id="user_password" type="password" name="user_password">
+            <input id="Cancel" type="button" value="Cancel">
+            <input id="Login" type="button" value="Login">
+        </div>
+        <div id="regis" title="Create an Account">
+            <input id="first_name" type="text" name="first_name">
+            <input id="last_name" type="text" name="last_name">
+            <input id="user_name" type="text" name="user_name">
+            <input id="email" type="text" name="email">
+            <input id="password" type="text" name="password">
+        </div>
+        <div id="lessonbox">
+            <div id="placeholder"></div>
             <div id='wrapper'>
                 <ul id="pagenumber">
                     <li> 1 </li>
                     <li> 2 </li>
-                     <li> 3 </li>
+                    <li> 3 </li>
                 </ul>
             </div>
             <input class="jcarousel-control-prev" type="button" value="&lsaquo; Prev">
             <input class="jcarousel-control-next" type="button" value="Next &rsaquo;">
         </div>
-            <div id="footer-background">
-            </div>
+        <div id="footer-background">
+        </div>
     </body>
 </html>
